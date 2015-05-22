@@ -2,4 +2,14 @@
 
 
 $route['default_controller'] = "top";
-$route['404_override'] = '';
+$route['about_philippines'] = "top/about_philippines";
+$route['contact'] = "top/contact";
+$route['registration'] = "top/registration";
+$route['congress'] = "top/congress";
+$route['committees'] = "top/committees";
+$route['credit_card'] = "top/credit_card";
+$route['refund_policy'] = "top/refund_policy";
+$route['programme'] = "top/programme";
+
+
+$route['404_override'] = 'top/index';
