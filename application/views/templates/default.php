@@ -15,7 +15,8 @@
   <script type='text/javascript' src='<?php echo base_url(); ?>js/jquery.js'></script>
   <link rel='stylesheet' href="<?php echo base_url(); ?>css/dynamic.css" type="text/css" media="all" />
   <link rel='stylesheet' href="<?php echo base_url(); ?>css/blessed.css" type="text/css" media="all" />
-  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 
 
 </head>
