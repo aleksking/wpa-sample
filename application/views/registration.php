@@ -1,62 +1,67 @@
-<div class="wrap contentclass" role="document">       
+<table border="0">
+    <th>Registration Fees: <span>WPA Philippines 2016</span></th>
+    <th>EARLY BIRD FEE:<span>Until 1 Nov 2015</span></th>
+    <th>ADVANCE FEE:<span>Nov 2015 - Feb 2016</span></th>
+    <th>ONSITE FEE:<span>Feb 2016 Onwards</span></th>
+  <tr>
+    <td>Psychiatrist/Physician from Group A Country</td>
+    <td>P26,100.00 / USD 580</td>
+    <td>P29,250.00 / USD 650</td>
+    <td>P32,400.00 / USD 720</td>
+  </tr>
+  <tr>
+    <td>Psychiatrist/Physician from Group B Country</td>
+    <td>P20,250 / USD 450</td>
+    <td>P23,400.00 / USD 520</td>
+    <td>P26,100.00 / USD 580</td>
+  </tr>
+  <tr>
+    <td>Psychiatrist/Physician from Group C Country</td>
+    <td>P18,000.00 /USD 400</td>
+    <td>P20,250.00 / USD 450</td>
+    <td>P23,400.00 / USD 520</td>
+  </tr>
+  <tr>
+    <td>Psychiatrist/Physician from Group D Country</td>
+    <td>P15,750.00 / USD 350</td>
+    <td>P18,000.00 /USD 400</td>
+    <td>P20,250.00 / USD 450</td>
+  </tr>
+  <tr>
+    <td>PPA Member (In good Standing)</td>
+    <td>P10,000.00</td>
+    <td>P12,000.00</td>
+    <td>P14,000.00</td>
+  </tr>
+ <tr>
+    <td>** Students</td>
+    <td>P9,000.00 / USD 200</td>
+    <td>P11,250.00 / USD 250</td>
+    <td>P13,500.00 /USD 300</td>
+  </tr>
+  <tr>
+    <td>Other Professionals (Psychologists, Social Workers, Nurses, etc…)</td>
+    <td>P18,000.00 / USD 400</td>
+    <td>P20,250.00 / USD 450</td>
+    <td>P22,500.00 / USD 500</td>
+  </tr>
+  <tr>
+    <td>Daily Rate</td>
+    <td>P15,750.00 / USD 350</td>
+    <td>P20,250.00 / USD 450</td>
+    <td>P23,400.00 / USD 520</td>
+  </tr>
+  <tr>
+    <td>Pre Congress Workshops</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Gala Dinner</td>
+    <td>P2,250.00 / USD 50</td>
+    <td>P2,250.00 / USD 50</td>
+    <td>P2,250.00 / USD 50</td>
+  </tr>
 
-  <div id="pageheader" class="titleclass">
-    <div class="container">
-      <div class="page-header">
-        <h1 class="entry-title" itemprop="name">Registration</h1>
-      </div>    
-    </div>
-  </div>
-
-  <div id="content" class="container">
-    <div class="row">
-      <div id="main" class="main col-md-6" role="main"> 
-          <h3>Fee Covers</h3>
-          <u>
-            <li>Congress Scientific Sessions Attendance</li>
-            <li>Participation in Opening Ceremony, Welcome Cocktail and Closing Ceremony</li>
-            <li>Admission to the Exhibition Area</li>
-            <li>Congress bag, Congress documents, Abstracts, Final Programme and other congress materials</li>
-            <li>Coffee breaks</li>
-          </u>
-          
-        </div>
-
-        <div class="contactformcase col-md-6">
-          <h3>Register now! </h3>
-          <form action="" id="contactForm" method="post">
-            <div class="contactform">
-              <p>
-                <label for="contactFirstName"><b>First Name:</b></label>
-                <input type="text" name="contactFirstName" id="contactFirstName" value="" class="required requiredField full" />
-              </p>
-
-              <p>
-                <label for="contactLastName"><b>Last Name:</b></label>
-                <input type="text" name="contactLastName" id="contactLastName" value="" class="required requiredField full"/>
-              </p>
-
-              <p>
-                <label for="email"><b>Email: </b></label>
-                <input type="text" name="email" id="email" value="" class="required requiredField email full" />
-              </p>
-
-              <p>
-                <label for="contactPhone"><b>Phone</b></label>
-                <input type="text" name="contactPhone" id="contactPhone" value="" class="required requiredField full"/>
-              </p>
-              <p>
-                <label for="contactAddress"><b>Address: </b></label>
-                <textarea name="contactAddress" id="contactAddress" rows="10" class="required requiredField"></textarea>
-              </p>
-              <p>
-                <input type="submit" class="kad-btn kad-btn-primary" id="submit" value="Register"></input>
-              </p>
-            </div><!-- /.contactform-->
-   
-          </form>
-        </div><!--contactform-->
-                      
-      </div>
-    </div>
-  </div>
+</table>
