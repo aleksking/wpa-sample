@@ -189,7 +189,13 @@ table td:hover {
 	background: #2d5c88;
 	color: #fff;
 	cursor: pointer;
+}
+
+table.groupA, table.groupA td:first-child, table.groupA td:first-child:hover, table.groupA td:first-child, table.groupA td:hover {
+	background: #fafafa;
+	color: #1A1A1A;
 }	
+
 
 .featured-column {}
 

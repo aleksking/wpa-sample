@@ -80,90 +80,71 @@
 <p>* Please refer to the list of countries by groups below<br>
 * Current school ID is required to validate your status.</p>
 
-<span style="font-size:18px; color:#2d5c88;">Group A : Upper and High Income Economies by world Bank</span>
 <br>
-
-
+<span style="font-size:18px; color:#2d5c88;">Group A : Upper and High Income Economies by world Bank</span>
 <div style="clear:both"></div>
-<div class="box_highlight" style="">
-  <div class="one-fourth">
-    <p>Andorra<br>
-Aruba<br>
-Australia<br>
-Austria<br>
-Bahamas, The<br>
-Bahrain<br>
-Barbados<br>
-Belgium<br>
-Bermuda<br>
-Brunei Darussalam<br>
-Canada<br>
-Cayman Islands<br>
-Channel Islands<br>
-Croatia<br>
-Curacao<br>
-Cyprus<br></p>
 
-  </div>
+<table border="0" class="groupA">
+  <tr>
+  <?php
+  $ac = 1;
+  foreach ($group_a as $a) {
+    echo '<td>'.$a.'</td>';
+    echo ($ac % 4 == 0 )? '</tr><tr>':'';
+    echo (count($group_a) == $ac && $ac % 4 != 0)? '</tr>':''; 
+    $ac++;
+  }
+  ?>
+</table>
 
-  <div class="one-fourth">
-  <p>Denmark<br>
-Estonia<br>
-Faeroe Islands<br>
-Finland<br>
-France<br>
-French Polynesia<br>
-Germany<br>
-Greece<br>
-Greenland<br>
-Guam<br>
-Hongkong SAR, China<br>
-Hungary<br>
-Iceland<br>
-Ireland<br>
-Isle of Man<br>
-Israel<br>
-Italy<br>
-</p>
-  </div>
+<br>
+<span style="font-size:18px; color:#2d5c88;">Group B: Upper-Middle - income economies by the World Bank</span>
+<div style="clear:both"></div>
 
-  <div class="one-fourth">
-  <p>Japan<br>
-Korea, Rep<br>
-Kuwait<br>
-Liechtenstein<br>
-Luxembourg<br>
-Malta<br>
-Monaco<br>
-New Celedonia<br>
-New Zealand<br>
-Northern Mariana Islands<br>
-Norway<br>
-Oman<br>
-Poland<br>
-Portugal<br>
-Puerto Rico<br>
-Qatar<br>
-San Marino<br>
-</p>
-  </div>
+<table border="0" class="groupA">
+  <tr>
+  <?php
+  $ac = 1;
+  foreach ($group_b as $b) {
+    echo '<td>'.$b.'</td>';
+    echo ($ac % 4 == 0 )? '</tr><tr>':'';
+    echo (count($group_b) == $ac && $ac % 4 != 0)? '</tr>':''; 
+    $ac++;
+  }
+  ?>
+</table>
 
-  <div class="one-fourth last">
-  <p>Saudi Arabia<br>
-Singapore<br>
-Sint Maarten<br>
-Slovak Republic<br>
-Slovenia<br>
-Spain<br>
-St Kitts and Nevis<br>
-St Martin<br>
-Sweden<br>
-Switzerland<br>
-Trinidad and Tobago<br>
-Turks and Caicos Islands<br>
-United Kingdom<br>
-Untied States<br>
-Virgin Islands (US)<br>
-</p>
-  </div>
-</div>
+<br>
+<span style="font-size:18px; color:#2d5c88;">Group C: Lowe-Middle - income economies by the World Bank</span>
+<div style="clear:both"></div>
+
+<table border="0" class="groupA">
+  <tr>
+  <?php
+  $ac = 1;
+  foreach ($group_c as $c) {
+    echo '<td>'.$c.'</td>';
+    echo ($ac % 4 == 0 )? '</tr><tr>':'';
+    echo (count($group_c) == $ac && $ac % 4 != 0)? '</tr>':''; 
+    $ac++;
+  }
+  ?>
+</table>
+
+<br>
+<span style="font-size:18px; color:#2d5c88;">Group D: Low-income economies by the World Bank</span>
+<div style="clear:both"></div>
+
+<table border="0" class="groupA">
+  <tr>
+  <?php
+  $ac = 1;
+  foreach ($group_d as $d) {
+    echo '<td>'.$d.'</td>';
+    echo ($ac % 4 == 0 )? '</tr><tr>':'';
+    echo (count($group_d) == $ac && $ac % 4 != 0)? '</tr>':''; 
+    $ac++;
+  }
+  ?>
+</table>
+  
