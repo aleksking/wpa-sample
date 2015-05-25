@@ -155,20 +155,41 @@ table {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-moz-box-shadow:0 3px 6px rgba(0, 0, 0, 0.4);
-	box-shadow:0 3px 6px rgba(0, 0, 0, 0.4)
+	box-shadow:0 3px 6px rgba(0, 0, 0, 0.4);
+	color: #1A1A1A;
 }
 	
-table th {padding:14px 20px; text-transform:uppercase; font-weight: bold}
+table th {
+	padding:14px 20px; 
+	font-weight: bold;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	font-size: 15px;
+}
+
+table th span {
+	font-size: 12px;
+	color: #204160;
+}
 
 table td {
-   background-image: -moz-linear-gradient(top, #fafafa, #E0E0E0);
-   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#E0E0E0));
-   background-image: -webkit-linear-gradient(top, #fafafa, #E0E0E0); 
-   background-image: -ms-linear-gradient(top, #fafafa, #E0E0E0);
-   background-image: -o-linear-gradient(top, #fafafa, #E0E0E0);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#E0E0E0');
-   padding: 14px 20px
+   padding: 14px 20px;
+   border-right: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   background: #fafafa;
 }
+
+table td:first-child, table td:first-child:hover {
+	background: #eaeaea;
+	color: #1A1A1A;
+	cursor: pointer;
+}
+
+table td:hover {
+	background: #2d5c88;
+	color: #fff;
+	cursor: pointer;
+}	
 
 .featured-column {}
 
@@ -1167,3 +1188,11 @@ div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline
 	border: 1px solid #254e75;
 }
 
+ul.bullet {
+    list-style-position: inside;
+}
+
+ul.bullet li {
+	list-style-position: inside;
+    list-style-type: disc;
+}
