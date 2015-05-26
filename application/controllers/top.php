@@ -139,6 +139,14 @@ class Top extends CI_Controller {
 		$this->template->load('default', 'congress', $data);
 	}
 
+	public function venue()
+	{
+		$data = array(
+		    'title' => "Venue",
+		);
+		$this->template->load('default', 'venue', $data);
+	}
+
 	public function committees()
 	{
 		$data = array(
@@ -169,6 +177,14 @@ class Top extends CI_Controller {
 		    'title' => "Programme",
 		);
 		$this->template->load('default', 'programme', $data);
+	}
+
+	public function accommodation()
+	{
+		$data = array(
+		    'title' => "Accommodation",
+		);
+		$this->template->load('default', 'accommodation', $data);
 	}
 
 	public function about_philippines()

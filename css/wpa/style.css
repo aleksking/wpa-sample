@@ -179,7 +179,7 @@ table td {
    background: #fafafa;
 }
 
-table td:first-child, table td:first-child:hover {
+table td:first-child, table td:first-child:hover, table.prgm td:first-child:hover {
 	background: #eaeaea;
 	color: #1A1A1A;
 	cursor: pointer;
@@ -191,7 +191,10 @@ table td:hover {
 	cursor: pointer;
 }
 
-table.groupA, table.groupA td:first-child, table.groupA td:first-child:hover, table.groupA td:first-child, table.groupA td:hover {
+table.groupA, table.groupA td:first-child, 
+table.groupA td:first-child:hover, 
+table.groupA td:first-child, 
+table.groupA td:hover{
 	background: #fafafa;
 	color: #1A1A1A;
 }	
@@ -203,12 +206,29 @@ table.groupA, table.groupA td:first-child, table.groupA td:first-child:hover, ta
 table tr:last-child td:first-child {
 	-moz-border-radius-bottomleft: 5px;
 	-webkit-border-bottom-left-radius: 5px;
-	border-bottom-left-radius: 5px}
+	border-bottom-left-radius: 5px
+}
 	
 table tr:last-child td:last-child {
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-bottom-right-radius:5px;
-	border-bottom-right-radius: 5px}
+	border-bottom-right-radius: 5px
+}
+
+table.prgm tr td {
+	font-size: 14px;
+}
+
+table.prgm tr td span {
+	font-size: 13px;
+	color: #333333;
+	font-style: italic;
+}
+table.prgm tr td:hover{
+	background: #fafafa none repeat scroll 0 0;
+    color: #1a1a1a;
+}
+
 
 /**************************** Forms *****************************/
 

@@ -115,27 +115,31 @@
 
   <div id="footer">
 
-    
-    <!-- <div class="one-fourth">
-        <h3>Useful Links</h3>
-            <ul class="footer_links">
-                <li><a href="#">Lorem Ipsum</a></li>
-                <li><a href="#">Ellem Ciet</a></li>
-                <li><a href="#">Currivitas</a></li>
-                <li><a href="#">Salim Aritu</a></li>
-            </ul>
+    <div class="one-half">
+        <h3>Menu</h3>
+        <ul class="footer_links">
+            <li><a href="<?php echo base_url(); ?>">HOME</a></li>
+            <li><a href="<?php echo base_url(); ?>congress">CONGRESS INFORMATION</a></li>
+            <li><a href="<?php echo base_url(); ?>registration">REGISTRATION</a></li>
+            <li><a href="<?php echo base_url(); ?>programme">PROGRAMME</a></li>
+            <li><a href="<?php echo base_url(); ?>accommodation">HOTEL AND TRAVEL</a></li>
+            <li><a href="<?php echo base_url(); ?>contact">CONTACT US</a></li>
+        </ul>
     </div>
 
-    <div class="one-fourth">
-        <h3>Terms</h3>
-            <ul class="footer_links">
-                <li><a href="#">Lorem Ipsum</a></li>
-                <li><a href="#">Ellem Ciet</a></li>
-                <li><a href="#">Currivitas</a></li>
-                <li><a href="#">Salim Aritu</a></li>
-            </ul>
+    <div class="one-half last">
+        <h3>Contact Us</h3>
+        <p>
+          www. philpsych.ph<br>
+          Email: philpsych_org@yahoo.com<br>
+          Telephone Number: +632.6359858<br>
+          Address: Unit 1011 Medical Plaza Bldg. San Miguel Avenue, Ortigas Center, Pasig City <br>
+          Facebook: Philippine Psychiatric Association, Inc. (PPA)<br>
+          Twitter: PPA Psychiatry/ @PPA_Psychiatry
+        </p>
     </div>
-    
+
+  <!-- 
 
     <div class="one-fourth">
         <h3>Information</h3>

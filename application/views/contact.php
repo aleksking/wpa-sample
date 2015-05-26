@@ -8,12 +8,12 @@
 
     <h2>Contact</h2>
     <p><strong>Secretariat</strong><br />
-    www. philpsych.ph<br /><br />
+    www. philpsych.ph<br />
     Email: philpsych_org@yahoo.com<br />
     Telephone Number: +632.6359858 <br />
     Address: Unit 1011 Medical Plaza Bldg. San Miguel Avenue, Ortigas Center, Pasig City <br />
     Facebook: Philippine Psychiatric Association, Inc. (PPA)<br />
-    Twitter: PPA Psychiatry/ @PPA_Psychiatry<br />
+    Twitter: PPA Psychiatry/ @PPA_Psychiatry<br /><br />
     </p>
           
     <!-- <iframe width="465" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.no/maps?f=q&amp;source=s_q&amp;hl=no&amp;geocode=&amp;q=Hafstadvegen+35,+F%C3%B8rde&amp;aq=0&amp;oq=hafstadvegen+35&amp;sll=61.143235,9.09668&amp;sspn=17.454113,57.084961&amp;ie=UTF8&amp;hq=&amp;hnear=Hafstadvegen+35,+6800+F%C3%B8rde,+Sogn+og+Fjordane&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=61.450253,5.859145&amp;output=embed"></iframe><br /><small><a href="http://maps.google.no/maps?f=q&amp;source=embed&amp;hl=no&amp;geocode=&amp;q=Hafstadvegen+35,+F%C3%B8rde&amp;aq=0&amp;oq=hafstadvegen+35&amp;sll=61.143235,9.09668&amp;sspn=17.454113,57.084961&amp;ie=UTF8&amp;hq=&amp;hnear=Hafstadvegen+35,+6800+F%C3%B8rde,+Sogn+og+Fjordane&amp;t=m&amp;z=14&amp;iwloc=A&amp;ll=61.450253,5.859145" style="color:#0000FF;text-align:left">Enlarge Map</a></small> -->
@@ -37,7 +37,11 @@
                <input name="tel" id="field2" required="required" type="text">
           </div>
           
-          
+          <div id="field3-container" class="field f_50">
+               <label for="field3">Fax</label>
+               <input name="tel" id="field3" type="text">
+          </div>
+
           <div id="field5-container" class="field f_50">
                <label for="field5">Email</label>
                <input name="email" id="field5" required="required" type="email">
