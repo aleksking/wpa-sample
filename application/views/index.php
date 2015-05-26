@@ -1,5 +1,8 @@
 
+
+
 <div style="clear:both"></div>
+
 <div class="two-third">
 	<div id="slider3" class="nivoSlider" style="width: 630px; height: 280px">
         <img title="" src="<?php echo base_url(); ?>img/wpa/slides/rizal_park.png" alt="" width="630" height="280" />
@@ -13,11 +16,6 @@
 <div class="one-third last">
 	
 		<div style="margin:0;height: 280px">
-			<!-- <strong><a href="<?php echo base_url(); ?>about_philippines">It's More Fun in the Philippines</a></strong>
-			<p>The Philippines is an archipelagic Democratic state that is a melting pot of Eastern and Western cultures. Prior to being colonized by the Spaniards in 1565, it was already populated by a diverse society that traded with neighbouring cultures.<br>
-			The arrival of the Spaniards, when Ferdinand Magellan...  <a href="<?php echo base_url(); ?>about_philippines" class="button_small white">Continue Reading &raquo;</a></p>
-		
- -->
  		<a id="register_now_btn" href="<?php echo base_url(); ?>registration">Register Now!<br><span>WPA Regional Congress 2016</span></a>
  		
 
@@ -25,6 +23,11 @@
       	<img src="<?php echo base_url(); ?>img/wpa/organizers.png" alt="organizers" />
 
 		</div> 
+</div>
+
+<div style="clear:both"></div>
+<div style="margin-bottom:30px">
+	<img src="<?php echo base_url(); ?>img/wpa/wpa_2016_banner.png">
 </div>
 
 <div style="clear:both"></div>
@@ -66,7 +69,4 @@
 </div>
 
 
-<div style="clear:both"></div>
-<div style="margin-top:40px">
-	<img src="<?php echo base_url(); ?>img/wpa/wpa_2016_banner.png">
-</div>
+
