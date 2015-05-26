@@ -195,6 +195,14 @@ class Top extends CI_Controller {
 		$this->template->load('default', 'about_philippines', $data);
 	}
 
+	public function sponsorship()
+	{
+		$data = array(
+		    'title' => "Sponsorship and Accommodation",
+		);
+		$this->template->load('default', 'sponsorship', $data);
+	}
+
 	 function logout()
 	{
 		$this->session->unset_userdata('logged_in');

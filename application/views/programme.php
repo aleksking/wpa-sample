@@ -32,7 +32,7 @@
   </tr>
   <tr>
     <td>11:10 - 12:00</td>
-    <td colspan="2">Plenary Lecture 1<br>Collaborative Interdisciplinary Care within an Integrative Biopsychosocial Framework<br><span>- Dr. Allan Tasman"</span>
+    <td colspan="2">Plenary Lecture 1<br>Collaborative Interdisciplinary Care within an Integrative Biopsychosocial Framework<br><span>- Dr. Allan Tasman</span>
 </td>
   </tr>
   <tr>

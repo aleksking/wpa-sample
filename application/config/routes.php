@@ -6,12 +6,12 @@ $route['about_philippines'] = "top/about_philippines";
 $route['contact'] = "top/contact";
 $route['registration'] = "top/registration";
 $route['congress'] = "top/congress";
-$route['committees'] = "top/committees";
-$route['credit_card'] = "top/credit_card";
-$route['refund_policy'] = "top/refund_policy";
+
+
 $route['programme'] = "top/programme";
 $route['venue'] = "top/venue";
 $route['accommodation'] = "top/accommodation";
 $route['programme'] = "top/programme";
+$route['sponsorship'] = "top/sponsorship";
 
 $route['404_override'] = 'top/index';

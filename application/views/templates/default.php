@@ -96,7 +96,7 @@
           </ol>
         </li><!-- END sub menu -->
         
-        <li><a href="<?php echo base_url(); ?>contact_person">CONTACT PERSON</a></li>
+        <li><a href="<?php echo base_url(); ?>sponsorship"> SPONSORSHIP </a></li>
 
       </ol>
     
@@ -116,14 +116,14 @@
   <div id="footer">
 
     <div class="one-half">
-        <h3>Menu</h3>
+        <h3><a href="<?php echo base_url(); ?>">HOME</a></h3>
         <ul class="footer_links">
-            <li><a href="<?php echo base_url(); ?>">HOME</a></li>
             <li><a href="<?php echo base_url(); ?>congress">CONGRESS INFORMATION</a></li>
             <li><a href="<?php echo base_url(); ?>registration">REGISTRATION</a></li>
             <li><a href="<?php echo base_url(); ?>programme">PROGRAMME</a></li>
             <li><a href="<?php echo base_url(); ?>accommodation">HOTEL AND TRAVEL</a></li>
             <li><a href="<?php echo base_url(); ?>contact">CONTACT US</a></li>
+            <li><a href="<?php echo base_url(); ?>sponsorship">SPONSORSHIP</a></li>
         </ul>
     </div>
 

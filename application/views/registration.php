@@ -45,7 +45,7 @@
     <td>P14,000.00</td>
   </tr>
  <tr>
-    <td>** Students</td>
+    <td>Students</td>
     <td>P9,000.00 / USD 200</td>
     <td>P11,250.00 / USD 250</td>
     <td>P13,500.00 /USD 300</td>
