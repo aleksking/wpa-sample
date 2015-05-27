@@ -15,13 +15,13 @@
 
 
 <table border="0" class="rate_list">
-    <th>REGISTRATION FEES <br><span>WPA Philippines 2016</span></th>
-    <th>EARLY BIRD FEE <br><span>Until Nov 2015</span></th>
-    <th>ADVANCE FEE <br><span>Nov 2015 - Feb 2016</span></th>
-    <th>ONSITE FEE <br><span>Feb 2016 Onwards</span></th>
+    <th width="40%">REGISTRATION FEES <br><span>WPA Philippines 2016</span></th>
+    <th width="20%">EARLY BIRD FEE <br><span>Until Nov 2015</span></th>
+    <th width="20%">ADVANCE FEE <br><span>Nov 2015 - Feb 2016</span></th>
+    <th width="20%">ONSITE FEE <br><span>Feb 2016 Onwards</span></th>
   <tr>
     <td>Psychiatrist/Physician from Group A Country</td>
-    <td  onClick="func_submit('1')"><?php echo $rates[1] ?></td>
+    <td onClick="func_submit('1')"><?php echo $rates[1] ?></td>
     <td onClick="func_submit('2')"><?php echo $rates[2] ?></td>
     <td onClick="func_submit('3')"><?php echo $rates[3] ?></td>
   </tr>
@@ -35,7 +35,7 @@
     <td>Psychiatrist/Physician from Group C Country</td>
     <td onClick="func_submit('7')"><?php echo $rates[7] ?></td>
     <td onClick="func_submit('8')"><?php echo $rates[8] ?></td>
-    <td> onClick="func_submit('9')"><?php echo $rates[9] ?></td>
+    <td onClick="func_submit('9')"><?php echo $rates[9] ?></td>
   </tr>
   <tr>
     <td>Psychiatrist/Physician from Group D Country</td>
