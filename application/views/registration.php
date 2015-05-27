@@ -1,6 +1,6 @@
 <h1>WPA REGISTRATION RATES</h1>
-
-<span style="font-size:18px; color:#2d5c88;">Delegates, Students and other Professionals</span>
+<div class="two-third">
+  <span style="font-size:18px; color:#2d5c88;">Delegates, Students and other Professionals</span>
 <br>
 <p>Attending all Congress Scientific Sessions<br>
   Participation in Opening Ceremony, Welcome Cocktail and Closing Ceremonies<br>
@@ -8,6 +8,11 @@
   Congress bag, Congress Documents, Abstract, Final Programme and other congress materials<br>
   Coffee Breaks
 </p>
+</div>
+<div class="one-third last">
+  <img src="https://www.paypalobjects.com/webstatic/mktg/logo/PP_AcceptanceMarkTray-NoDiscover_243x40.png" alt="Buy now with PayPal" />
+</div>
+
 
 <table border="0" class="rate_list">
     <th>REGISTRATION FEES <br><span>WPA Philippines 2016</span></th>
@@ -16,51 +21,51 @@
     <th>ONSITE FEE <br><span>Feb 2016 Onwards</span></th>
   <tr>
     <td>Psychiatrist/Physician from Group A Country</td>
-    <td>P26,100.00 / USD 580</td>
-    <td>P29,250.00 / USD 650</td>
-    <td>P32,400.00 / USD 720</td>
+    <td  onClick="func_submit('1')"><?php echo $rates[1] ?></td>
+    <td onClick="func_submit('2')"><?php echo $rates[2] ?></td>
+    <td onClick="func_submit('3')"><?php echo $rates[3] ?></td>
   </tr>
   <tr>
     <td>Psychiatrist/Physician from Group B Country</td>
-    <td>P20,250 / USD 450</td>
-    <td>P23,400.00 / USD 520</td>
-    <td>P26,100.00 / USD 580</td>
+    <td onClick="func_submit('4')"><?php echo $rates[4] ?></td>
+    <td onClick="func_submit('5')"><?php echo $rates[5] ?></td>
+    <td onClick="func_submit('6')"><?php echo $rates[6] ?></td>
   </tr>
   <tr>
     <td>Psychiatrist/Physician from Group C Country</td>
-    <td>P18,000.00 /USD 400</td>
-    <td>P20,250.00 / USD 450</td>
-    <td>P23,400.00 / USD 520</td>
+    <td onClick="func_submit('7')"><?php echo $rates[7] ?></td>
+    <td onClick="func_submit('8')"><?php echo $rates[8] ?></td>
+    <td> onClick="func_submit('9')"><?php echo $rates[9] ?></td>
   </tr>
   <tr>
     <td>Psychiatrist/Physician from Group D Country</td>
-    <td>P15,750.00 / USD 350</td>
-    <td>P18,000.00 /USD 400</td>
-    <td>P20,250.00 / USD 450</td>
+    <td onClick="func_submit('10')"><?php echo $rates[10] ?></td>
+    <td onClick="func_submit('11')"><?php echo $rates[11] ?></td>
+    <td onClick="func_submit('12')"><?php echo $rates[12] ?></td>
   </tr>
   <tr>
     <td>PPA Member (In good Standing)</td>
-    <td>P10,000.00</td>
-    <td>P12,000.00</td>
-    <td>P14,000.00</td>
+    <td onClick="func_submit('13')"><?php echo $rates[13] ?></td>
+    <td onClick="func_submit('14')"><?php echo $rates[14] ?></td>
+    <td onClick="func_submit('15')"><?php echo $rates[15] ?></td>
   </tr>
  <tr>
     <td>Students</td>
-    <td>P9,000.00 / USD 200</td>
-    <td>P11,250.00 / USD 250</td>
-    <td>P13,500.00 /USD 300</td>
+    <td onClick="func_submit('16')"><?php echo $rates[16] ?></td>
+    <td onClick="func_submit('17')"><?php echo $rates[17] ?></td>
+    <td onClick="func_submit('18')"><?php echo $rates[18] ?></td>
   </tr>
   <tr>
     <td>Other Professionals (Psychologists, Social Workers, Nurses, etc…)</td>
-    <td>P18,000.00 / USD 400</td>
-    <td>P20,250.00 / USD 450</td>
-    <td>P22,500.00 / USD 500</td>
+    <td onClick="func_submit('19')"><?php echo $rates[19] ?></td>
+    <td onClick="func_submit('20')"><?php echo $rates[20] ?></td>
+    <td onClick="func_submit('21')"><?php echo $rates[21] ?></td>
   </tr>
   <tr>
     <td>Daily Rate</td>
-    <td>P15,750.00 / USD 350</td>
-    <td>P20,250.00 / USD 450</td>
-    <td>P23,400.00 / USD 520</td>
+    <td onClick="func_submit('22')"><?php echo $rates[22] ?></td>
+    <td onClick="func_submit('23')"><?php echo $rates[23] ?></td>
+    <td onClick="func_submit('24')"><?php echo $rates[24] ?></td>
   </tr>
   <tr>
     <td>Pre Congress Workshops</td>
@@ -70,9 +75,9 @@
   </tr>
   <tr>
     <td>Gala Dinner</td>
-    <td>P2,250.00 / USD 50</td>
-    <td>P2,250.00 / USD 50</td>
-    <td>P2,250.00 / USD 50</td>
+    <td onClick="func_submit('25')"><?php echo $rates[25] ?></td>
+    <td onClick="func_submit('26')"><?php echo $rates[26] ?></td>
+    <td onClick="func_submit('27')"><?php echo $rates[27] ?></td>
   </tr>
 
 </table>
@@ -148,8 +153,20 @@
   ?>
 </table>
 
+<script type="text/javascript">
+  function func_submit(val){
+    document.registration.pay.value = val;
+    //document.registration.submit();
+    return;
+}
+</script>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<form action="" name="registration" method="post">
+  <input type="hidden" name="pay" value="0">
+</form>
+
+
+<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="X5QWHZJ932XFS">
 <table>
@@ -162,6 +179,6 @@
 <input type="hidden" name="currency_code" value="USD">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+</form> -->
 
   

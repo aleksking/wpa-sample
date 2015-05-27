@@ -10,8 +10,9 @@ class Top extends CI_Controller {
 	{
 		parent::__construct();
 
-		$this->load->database();
+		//$this->load->database();
 		$this->load->library('template');
+		$this->load->helper(array('form'));
 
 		if(!$this->session->userdata('logged_in')){
 			//redirect('/login', 'refresh');
@@ -30,6 +31,36 @@ class Top extends CI_Controller {
 
 	public function registration()
 	{
+
+	$rates = array(
+		1 => 'P26,100.00 / USD 580',
+		2 => 'P29,250.00 / USD 650',
+		3 => 'P32,400.00 / USD 720',
+		4 => 'P20,250 / USD 450',
+		5 => 'P23,400.00 / USD 520',
+		6 => 'P26,100.00 / USD 580',
+		7 => 'P18,000.00 /USD 400',
+		8 => 'P20,250.00 / USD 450',
+		9 => 'P23,400.00 / USD 520',
+		10 => 'P15,750.00 / USD 350',
+		11 => 'P18,000.00 /USD 400',
+		12 => 'P20,250.00 / USD 450',
+		13 => 'P10,000.00',
+		14 => 'P12,000.00',
+		15 => 'P14,000.00',
+		16 => 'P9,000.00 / USD 200',
+		17 => 'P11,250.00 / USD 250',
+		18 => 'P13,500.00 /USD 300',
+		19 => 'P18,000.00 / USD 400',
+		20 => 'P20,250.00 / USD 450',
+		21 => 'P22,500.00 / USD 500',
+		22 => 'P15,750.00 / USD 350',
+		23 => 'P20,250.00 / USD 450',
+		24 => 'P23,400.00 / USD 520',
+		25 => 'P2,250.00 / USD 50',
+		26 => 'P2,250.00 / USD 50',
+		27 => 'P2,250.00 / USD 50'
+	);
 
 	$group_a = array(
 		"Andorra",	"Germany",	"Oman",
@@ -119,8 +150,15 @@ class Top extends CI_Controller {
 		    'group_b' => $group_b,
 		    'group_c' => $group_c,
 		    'group_d' => $group_d,
+		    'rates' => $rates,
 		);
-		$this->template->load('default', 'registration', $data);
+		
+		if($this->input->post('pay') && isset($rates[$this->input->post('pay')])){
+			$this->template->load('default', 'registration_confirm', array('rates' => $rates,'pay' => $this->input->post('pay')));
+		}else{
+			$this->template->load('default', 'registration', $data);
+		}
+		
 	}
 
 	public function contact()
