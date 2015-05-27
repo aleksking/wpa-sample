@@ -24,6 +24,8 @@
    
          <h2>Send Email</h2>
 
+          <p><?php echo $msg ?></p>
+
          <form action="" class="TTWForm" method="post" novalidate="">
             
           <div id="field1-container" class="field f_50">
@@ -36,11 +38,6 @@
                <label for="field2">Telephone</label>
                <input name="tel" id="field2" required="required" type="text">
           </div>
-          
-          <div id="field3-container" class="field f_50">
-               <label for="field3">Fax</label>
-               <input name="tel" id="field3" type="text">
-          </div>
 
           <div id="field5-container" class="field f_50">
                <label for="field5">Email</label>
@@ -52,7 +49,6 @@
                <label for="field4">Message</label>
                <textarea rows="5" cols="20" name="message" id="field4" required="required"></textarea>
           </div>
-          
           
           <div id="form-submit" class="field f_100 clearfix submit">
                <input value="Submit" type="submit">

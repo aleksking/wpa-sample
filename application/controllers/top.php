@@ -163,8 +163,25 @@ class Top extends CI_Controller {
 
 	public function contact()
 	{
+		$msg = '';
+
+		if($this->input->post('name') && $this->input->post('tel') && $this->input->post('email') && $this->input->post('message')){
+			$to = 'jmaniquez@gmail.com';
+			$subject = 'Inquiry from wpa website contact page';
+			$message = 'Name: '.$this->input->post('name').'\r\n'.
+					   'Tel: '.$this->input->post('tel').'\r\n'.
+					   'Email: '.$this->input->post('email').'\r\n'.
+					   'Message: \r\n'.$this->input->post('message').'\r\n';
+
+			mail($to, $subject, $message);
+			$msg = '<span style="color:green">Your message was successfully sent.</span>';
+		}else if($this->input->post()){
+			$msg = '<span style="color:red">All fields are required.</span>';	
+		}
+
 		$data = array(
 		    'title' => "Contact Us",
+		    'msg'	=> $msg,
 		);
 		$this->template->load('default', 'contact', $data);
 	}
