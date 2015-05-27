@@ -166,14 +166,18 @@ class Top extends CI_Controller {
 		$msg = '';
 
 		if($this->input->post('name') && $this->input->post('tel') && $this->input->post('email') && $this->input->post('message')){
-			$to = 'jmaniquez@gmail.com';
+			$to = 'philpsych_org@yahoo.com';
+			$headers = 'From: WPA Manila 2016<info@wpamanila2016.com>' . "\r\n";
+		    $headers .= "Content-type: text/html; charset=\"UTF-8\"; format=flowed \r\n";
+		    $headers .= "Mime-Version: 1.0 \r\n"; 
+		    $headers .= "Content-Transfer-Encoding: quoted-printable \r\n";
 			$subject = 'Inquiry from wpa website contact page';
-			$message = 'Name: '.$this->input->post('name').'\r\n'.
-					   'Tel: '.$this->input->post('tel').'\r\n'.
-					   'Email: '.$this->input->post('email').'\r\n'.
-					   'Message: \r\n'.$this->input->post('message').'\r\n';
+			$message = 'Name: '.$this->input->post('name').'<br>'.
+					   'Tel: '.$this->input->post('tel').'<br>'.
+					   'Email: '.$this->input->post('email').'<br>'.
+					   'Message: <br>'.$this->input->post('message').'<br>';
 
-			mail($to, $subject, $message);
+			mail($to, $subject, $message,$headers);
 			$msg = '<span style="color:green">Your message was successfully sent.</span>';
 		}else if($this->input->post()){
 			$msg = '<span style="color:red">All fields are required.</span>';	
