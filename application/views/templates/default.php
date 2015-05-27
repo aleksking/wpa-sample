@@ -80,7 +80,7 @@
         <li><a href="<?php echo base_url(); ?>registration">REGISTRATION</a>
           <!-- sub menu -->
           <ol>     
-            <li><a href="<?php echo base_url(); ?>credit_card">Credit Card Payments</a></li>
+            <!-- <li><a href="<?php echo base_url(); ?>credit_card">Credit Card Payments</a></li> -->
             <li><a href="<?php echo base_url(); ?>refund_policy">Refund Policy</a></li>
           </ol>
         </li><!-- END sub menu -->
