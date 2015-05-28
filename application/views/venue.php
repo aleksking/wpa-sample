@@ -17,5 +17,5 @@
   </div>  
 </div>
 <div class="one-half last">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3287270844394!2d121.0593961!3d14.5803351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c814e2f04cbf%3A0x6fca2a6bfede1503!2sMedical+Plaza+Bldg%2C+25+San+Miguel+Ave%2C+Ortigas+Center%2C+Pasig%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1432451782451" width="465" height="350" frameborder="0" style="border:0"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61800.02202217806!2d120.99874702964698!3d14.513289803291071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cbd95b3871e1%3A0xdecebc46f2b58867!2sPhilippine+International+Convention+Center!5e0!3m2!1sen!2sph!4v1432850687250" width="465" height="350" frameborder="0" style="border:0"></iframe>
 </div>
