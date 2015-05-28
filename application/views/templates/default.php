@@ -1,9 +1,11 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 
 <head>
 
 <title>WPA 2016</title>
-<meta name="keywords" content="WPA Manila 2016">
+<meta name="keywords" content="WPA Manila 2016, WPA 2016, WPA Manila, World Psychiatric Association, World Psychiatric Association 2016 Regional Congres, 42nd Annual Convention of the Philippine Psychiatric Association, WPA meeting">
+<meta name="description" content="World Psychiatric Association 2016 Regional Congress ans 42nd Annual Convention of the Philippine Psychiatric Association">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico" type="image/x-icon">
