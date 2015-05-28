@@ -5,6 +5,9 @@
 <title>WPA 2016</title>
 <meta name="keywords" content="WPA Manila 2016">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url(); ?>favicon.ico" type="image/x-icon">
     
 <!-- Google Fonts -->
     
