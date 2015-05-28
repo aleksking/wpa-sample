@@ -66,9 +66,9 @@
 
       <!-- Main Menu -->  
       <ol id="menu">
-        <li class="active_menu_item"><a href="<?php echo base_url(); ?>">HOME</a>
+        <li class="<?php echo ($active_menu == 'home')?' active_menu_item ':'' ?>"><a href="<?php echo base_url(); ?>">HOME</a>
 
-        <li><a href="<?php echo base_url(); ?>congress">CONGRESS INFORMATION</a>
+        <li class="<?php echo ($active_menu == 'congress')?' active_menu_item ':'' ?>"><a href="<?php echo base_url(); ?>congress">CONGRESS INFORMATION</a>
           <!-- sub menu -->
           <ol>     
             <li><a href="<?php echo base_url(); ?>committees">Committees</a></li>
@@ -77,7 +77,7 @@
           </ol>
         </li><!-- END sub menu -->
 
-        <li><a href="<?php echo base_url(); ?>registration">REGISTRATION</a>
+        <li class="<?php echo ($active_menu == 'registration')?' active_menu_item ':'' ?>"><a href="<?php echo base_url(); ?>registration">REGISTRATION</a>
           <!-- sub menu -->
           <ol>     
             <!-- <li><a href="<?php echo base_url(); ?>credit_card">Credit Card Payments</a></li> -->
@@ -85,9 +85,9 @@
           </ol>
         </li><!-- END sub menu -->
           
-        <li><a href="<?php echo base_url(); ?>programme">PROGRAMME</a></li>
+        <li class="<?php echo ($active_menu == 'programme')?' active_menu_item ':'' ?>"><a href="<?php echo base_url(); ?>programme">PROGRAMME</a></li>
 
-        <li><a href="<?php echo base_url(); ?>accommodation">HOTEL AND TRAVEL</a>
+        <li class="<?php echo ($active_menu == 'accommodation')?' active_menu_item ':'' ?>"><a href="<?php echo base_url(); ?>accommodation">HOTEL AND TRAVEL</a>
           <!-- sub menu -->
           <ol>     
             <li><a href="<?php echo base_url(); ?>travel_agency">Appointed Travel Agency</a></li>
@@ -96,7 +96,7 @@
           </ol>
         </li><!-- END sub menu -->
         
-        <li><a href="<?php echo base_url(); ?>sponsorship"> SPONSORSHIP </a></li>
+        <li class="<?php echo ($active_menu == 'sponsorship')?' active_menu_item ':'' ?>"><a href="<?php echo base_url(); ?>sponsorship"> SPONSORSHIP </a></li>
 
       </ol>
     

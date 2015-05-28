@@ -37,7 +37,7 @@
 		 font-family: 'Quicksand', sans-serif;
 }
 
-#menu li:hover > a {
+#menu li.active_menu_item > a, #menu li:hover > a {
         color: #FFF;
 		background: #2d5c88 ;
 }

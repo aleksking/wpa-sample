@@ -12,13 +12,13 @@
 
 <p>Come to Manila in February and see for yourself why it is truly more fun in the Philippines.</p>
 
-<p>Ma. Luz S. Casimiro-Querubin, MD, FPPA<br>
+<p><b>Ma. Luz S. Casimiro-Querubin, MD, FPPA<br>
 President<br>
-Philippine Psychiatric Association<br></p>
+Philippine Psychiatric Association<br></b></p>
 
-<p>Professor and Associate Dean<br>
+<p><b>Professor and Associate Dean<br>
 School of Medicine and Public Health<br>
-Ateneo de Manila University<br></p>
+Ateneo de Manila University<br></b></p>
 
 
 

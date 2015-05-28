@@ -23,6 +23,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => 'CodeIgniter this is it',
+		    'active_menu' => 'home',
 		);
 		 
 
@@ -151,6 +152,7 @@ class Top extends CI_Controller {
 		    'group_c' => $group_c,
 		    'group_d' => $group_d,
 		    'rates' => $rates,
+		    'active_menu' => 'registration',
 		);
 		
 		if($this->input->post('pay') && isset($rates[$this->input->post('pay')])){
@@ -186,6 +188,7 @@ class Top extends CI_Controller {
 		$data = array(
 		    'title' => "Contact Us",
 		    'msg'	=> $msg,
+		    'active_menu' => 'congress',
 		);
 		$this->template->load('default', 'contact', $data);
 	}
@@ -194,6 +197,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Congress Information ",
+		    'active_menu' => 'congress',
 		);
 		$this->template->load('default', 'congress', $data);
 	}
@@ -202,6 +206,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Venue",
+		    'active_menu' => 'congress',
 		);
 		$this->template->load('default', 'venue', $data);
 	}
@@ -210,6 +215,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Committees",
+		    'active_menu' => 'congress',
 		);
 		$this->template->load('default', 'committees', $data);
 	}
@@ -218,6 +224,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Credit Card Payments",
+		    'active_menu' => 'registration',
 		);
 		$this->template->load('default', 'credit_card', $data);
 	}
@@ -226,6 +233,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Refund Policy",
+		    'active_menu' => 'registration',
 		);
 		$this->template->load('default', 'refund_policy', $data);
 	}
@@ -234,6 +242,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Programme",
+		    'active_menu' => 'programme',
 		);
 		$this->template->load('default', 'programme', $data);
 	}
@@ -242,6 +251,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Accommodation",
+		    'active_menu' => 'accommodation',
 		);
 		$this->template->load('default', 'accommodation', $data);
 	}
@@ -250,6 +260,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "It's More Fun in the Philippines",
+		    'active_menu' => 'home',
 		);
 		$this->template->load('default', 'about_philippines', $data);
 	}
@@ -258,6 +269,7 @@ class Top extends CI_Controller {
 	{
 		$data = array(
 		    'title' => "Sponsorship and Accommodation",
+		    'active_menu' => 'sponsorship',
 		);
 		$this->template->load('default', 'sponsorship', $data);
 	}
