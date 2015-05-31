@@ -163,6 +163,11 @@ class Top extends CI_Controller {
 		
 	}
 
+	public function registration_form() {
+
+		$this->template->load('default', 'registration_form', $data);
+	}
+
 	public function contact()
 	{
 		$msg = '';
