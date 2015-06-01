@@ -15,4 +15,6 @@ $route['accommodation'] = "top/accommodation";
 $route['programme'] = "top/programme";
 $route['sponsorship'] = "top/sponsorship";
 
+$route['refund_policy'] = "top/refund_policy";
+
 $route['404_override'] = 'top/index';
