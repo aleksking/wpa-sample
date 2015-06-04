@@ -145,16 +145,19 @@ class Top extends CI_Controller {
 			"Ethiopia",	"Mauritania",	"Zimbabwe",
 		);
 
-		$data = array(
-		    'title' => "Registration",
-		    'group_a' => $group_a,
-		    'group_b' => $group_b,
-		    'group_c' => $group_c,
-		    'group_d' => $group_d,
-		    'rates' => $rates,
-		    'active_menu' => 'registration',
+		$food_diet = array( 
+			1 => "Regular",		
+			2 => "Muslim",
+			3 => "Vegetarian",
 		);
 
+		$salutation = array(
+			1 => "Mr",		
+			2 => "Ms",
+		);
+		
+
+		$values = array();
 
 		$layout = 'registration';
 
@@ -164,7 +167,7 @@ class Top extends CI_Controller {
 			$layout = 'registration';
 		}
 		
-		if($this->input->post('first_name')) {
+		if($this->input->post('pay_no')) {
 			$this->load->helper(array('form'));
 			$this->load->library('form_validation');
 
@@ -188,15 +191,37 @@ class Top extends CI_Controller {
 			$this->load->database();
 			$this->load->model('customers','',true);
 			if($this->form_validation->run()) {
-				$saved = $this->customers->register($values);
-				if($saved) {
-					$this->session->set_userdata('registration_id',$saved);
-					 redirect($this->config->config['base_url'].'index.php/proceed_page','refresh');
+
+				if($this->input->post('register_confirm')){
+					$saved = $this->customers->register($values);
+					if($saved) {
+						$this->session->set_userdata('registration_id',$saved);
+					}
+					redirect('/registration', 'refresh');
 				}
+
+				if($this->input->post('user-data')) 
+					$layout = 'register_confirm';
+				else
+					$layout = 'customer_form';
+				
 			} else {
 				$layout = 'customer_form';
 			}
 		}
+
+		$data = array(
+		    'title' => "Registration",
+		    'group_a' => $group_a,
+		    'group_b' => $group_b,
+		    'group_c' => $group_c,
+		    'group_d' => $group_d,
+		    'rates' => $rates,
+		    'active_menu' => 'registration',
+		    'values' => $values,
+		    'food_diet' => $food_diet,
+		    'salutation' => $salutation,
+		);
 
 		$this->template->load('default', $layout, $data);
 		

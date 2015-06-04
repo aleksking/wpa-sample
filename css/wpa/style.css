@@ -17,10 +17,14 @@ body {	font-family: Arial, Helvetica, sans-serif;
 		background: #eaeaea url('../../img/wpa/body_bg.png');
 		color: #666;
 }
+
+a:hover, a:focus {
+	text-decoration: none !important;
+}
  
 #container {
 	font-size: 1em;
-	width:960px;
+	width:1000px;
 	border-radius: 5px;
 	/* 
 	border-top-left-radius: 5px;
@@ -1212,6 +1216,7 @@ div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline
 #register_now_btn:hover{
 	background: #4173a3 none repeat scroll 0 0;
 	border: 1px solid #254e75;
+	text-decoration: none;
 }
 
 ul.bullet {
@@ -1221,4 +1226,10 @@ ul.bullet {
 ul.bullet li {
 	list-style-position: inside;
     list-style-type: disc;
+}
+
+form.form_label label{
+	padding: 0; 
+	text-align: left; 
+	font-size: 16px;
 }

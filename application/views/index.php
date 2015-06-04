@@ -45,7 +45,7 @@
 	</p>
 </div>
 
-<div class="one-third last box_highlight" style="width: 280px; clear: none;float: right;margin: 0 0 0 20px;padding: 20px;background: #e8e8e8;">
+<div class="one-third last box_highlight" style="width: 320px; clear: none;float: right;margin: 0 0 0 20px;padding: 20px;background: #e8e8e8;">
 	<h2 style="font-size: 17px; margin: 10px 0 20px;"><a href="<?php echo base_url(); ?>about_philippines">It's More Fun in the Philippines</a></h2>
 	<a href="<?php echo base_url(); ?>about_philippines"><img src="<?php echo base_url(); ?>img/wpa/mag/sm_mall_of_asia.png" alt="It's More Fun in the Philippines" /></a>
 	<p>The Philippines is an archipelagic Democratic state that is a melting pot of Eastern and Western cultures. Prior to being colonized by the Spaniards in 1565, it was already populated by a diverse society that traded with neighbouring cultures.</p>

@@ -5,7 +5,7 @@
 
 <div style="clear:both"></div>
 <div class="one-half">
-  <div class="box_highlight" style="margin:0; height:318px;">
+  <div class="box_highlight" style="margin:0; height:350px;">
     <h2>Venue</h2>
 
     <p>The Philippine International Convention Centre is a convention centre located in the Cultural Centre of the Philippines Complex  in Pasay, Metro Manila. 
