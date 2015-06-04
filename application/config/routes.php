@@ -9,6 +9,8 @@ $route['registration/confirm'] = "top/proceed_page";
 $route['registration_form'] = "top/registration_form";
 $route['congress'] = "top/congress";
 
+$route['register_complete'] = "top/register_complete";
+
 
 $route['programme'] = "top/programme";
 $route['venue'] = "top/venue";

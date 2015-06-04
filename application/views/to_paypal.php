@@ -12,6 +12,10 @@
 <input type="hidden" name="item_name" value="WPA 2016 Registration">
 <input type="hidden" name="currency_code" value="PHP">
 <input type="hidden" name="amount" value="<?php echo $rates_php[$values['pay_no']] ?>">
+
+<input type="hidden" name="cancel_return" value="<?php echo base_url(); ?>registration">
+<input type="hidden" name="return" value="<?php echo base_url(); ?>register_complete">
+
 </form>
 
 <script type="text/javascript">

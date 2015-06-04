@@ -259,6 +259,15 @@ class Top extends CI_Controller {
 		
 	}
 
+	public function register_complete()
+	{
+		$data = array(
+		    'title' => "Registration Complete",
+		    'active_menu' => 'registration',
+		);
+		$this->template->load('default', 'register_complete', $data);
+	}
+
 	public function _check_phone($phone)
     {
 	   if(preg_match('/[0-9]{7,14}/',$phone))
