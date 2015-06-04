@@ -33,6 +33,13 @@ class Top extends CI_Controller {
 	public function registration()
 	{
 
+	$curdate = strtotime(date("Y-m"));
+	$activedate = array(
+		'early' => ($curdate < strtotime(date("2015-11")))? 'active':'',
+		'advance' => ($curdate > strtotime(date("2015-11")) && $curdate < strtotime(date("2016-02")))? 'active':'',
+		'onsite' => ($curdate > strtotime(date("2016-02")))? 'active':''
+	);
+
 	$rates = array(
 		1 => 'P26,100.00 / USD 580',
 		2 => 'P29,250.00 / USD 650',
@@ -252,7 +259,8 @@ class Top extends CI_Controller {
 		    'values' => $values,
 		    'food_diet' => $food_diet,
 		    'salutation' => $salutation,
-		    'rates_php' => $rates_php
+		    'rates_php' => $rates_php,
+		    'activedate' => $activedate
 		);
 
 		$this->template->load('default', $layout, $data);

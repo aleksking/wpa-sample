@@ -189,10 +189,15 @@ table td:first-child, table td:first-child:hover, table.prgm td:first-child:hove
 	cursor: pointer;
 }
 
-table td:hover {
+table td.active {
+	background: #ECF2F8;
+	color: #1a1a1a;
+	cursor: pointer;
+}
+
+table td.active:hover {
 	background: #2d5c88;
 	color: #fff;
-	cursor: pointer;
 }
 
 table.groupA, table.groupA td:first-child, 
