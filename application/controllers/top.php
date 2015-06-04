@@ -63,6 +63,36 @@ class Top extends CI_Controller {
 		27 => 'P2,250.00 / USD 50'
 	);
 
+	$rates_php = array(
+		1 => '26100.00',
+		2 => '29250.00',
+		3 => '32400.00',
+		4 => '20250',
+		5 => '23400.00',
+		6 => '26100.00',
+		7 => '18000.00',
+		8 => '20250.00',
+		9 => '23400.00',
+		10 => '15750.00',
+		11 => '18000.00',
+		12 => '20250.00',
+		13 => '10000.00',
+		14 => '12000.00',
+		15 => '14000.00',
+		16 => '9000.00',
+		17 => '11250.00',
+		18 => '13500.00',
+		19 => '18000.00',
+		20 => '20250.00',
+		21 => '22500.00',
+		22 => '15750.00',
+		23 => '20250.00',
+		24 => '23400.00',
+		25 => '2250.00',
+		26 => '2250.00',
+		27 => '2250.00'
+	);
+
 	$group_a = array(
 		"Andorra",	"Germany",	"Oman",
 		"Aruba",	"Greece",	"Poland",
@@ -197,13 +227,12 @@ class Top extends CI_Controller {
 					if($saved) {
 						$this->session->set_userdata('registration_id',$saved);
 					}
-					redirect('/registration', 'refresh');
+
+					$layout = 'to_paypal';
 				}
 
 				if($this->input->post('user-data')) 
 					$layout = 'register_confirm';
-				else
-					$layout = 'customer_form';
 				
 			} else {
 				$layout = 'customer_form';
@@ -221,6 +250,7 @@ class Top extends CI_Controller {
 		    'values' => $values,
 		    'food_diet' => $food_diet,
 		    'salutation' => $salutation,
+		    'rates_php' => $rates_php
 		);
 
 		$this->template->load('default', $layout, $data);
