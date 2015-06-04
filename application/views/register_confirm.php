@@ -2,44 +2,41 @@
 <h2 style="text-align:center"><span class="gray">Regisration Fee ></span> <span class="gray"> Personal Info  > </span> <span> Confirmation</span> </h2>
 
 <form role="form" class="form-horizontal form_label" method="post">
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="first_name">Rate:</label>
-		<div class="col-sm-6"><?php echo $rates[$values['pay_no']] ?></div>
-	</div>
 
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="salutation">Salutation:</label>
-		<div class="col-sm-6"><?php echo $salutation[$values['salutation']]." ".$values['first_name']." ".$values['last_name'] ?> 
+	<table class="reg-table">
+		<tr>
+			<td>Registration Fee</td>
+			<td><?php echo ($this->input->post('pay')) ? $rates[$this->input->post('pay')] : $rates[$this->input->post('pay_no')] ; ?></td>
+		</tr>
+		<tr>
+			<td>Rate</td>
+			<td><?php echo $rates[$values['pay_no']] ?></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><?php echo $salutation[$values['salutation']]." ".$values['first_name']." ".$values['last_name'] ?> </td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><?php echo $values['email'] ?></td>
+		</tr>
+		<tr>
+			<td>Birth Date</td>
+			<td><?php echo $values['birthdate'] ?></td>
+		</tr>
+		<tr>
+			<td>Contact No.</td>
+			<td><?php echo $values['contact'] ?></td>
+		</tr>
+		<tr>
+			<td>Food Diet</td>
+			<td><?php echo $food_diet[$values['food_diet']] ?></td>
+		</tr>
+	</table>
 
-		</div>
-	</div>
-
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="email">Email:</label>
-		<div class="col-sm-6"><?php echo $values['email'] ?></div>
-	</div>
-
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="birthdate">Birth Date:</label>
-		<div class="col-sm-6"><?php echo $values['birthdate'] ?></div>
-	</div>
-
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="contact">Contact No.:</label>
-		<div class="col-sm-6"><?php echo $values['contact'] ?></div>
-	</div>
-
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="food_diet">Food Diet:</label>
-		<div class="col-sm-6"><?php echo $food_diet[$values['food_diet']] ?></div>
-	</div>
-
-	<div class="form-group">
-		<label class="control-label col-sm-2"></label>
-		<div class="col-sm-6">
-			<input type="submit" value="Back" name="back" class="btn btn-primary" style="width: 120px">
-			<input type="submit" value="Register" name="register_confirm" class="btn btn-primary" style="width: 120px">
-		</div>
+	<div style="text-align:center; margin:20px 0;">
+		<input type="submit" value="Back" name="back" class="btn btn-primary" style="width: 120px; margin-right:20px;">
+		<input type="submit" value="Register" name="register_confirm" class="btn btn-primary" style="width: 120px">
 	</div>
 
 	<input type="hidden" name="pay_no" value="<?php echo $values['pay_no'] ?>">

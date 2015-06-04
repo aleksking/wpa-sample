@@ -233,6 +233,8 @@ class Top extends CI_Controller {
 
 				if($this->input->post('user-data')) 
 					$layout = 'register_confirm';
+				else if($this->input->post('back')) 
+					$layout = 'customer_form';
 				
 			} else {
 				$layout = 'customer_form';

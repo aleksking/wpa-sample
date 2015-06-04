@@ -203,6 +203,18 @@ table.groupA td:hover{
 	color: #1A1A1A;
 }	
 
+table.reg-table td:first-child {
+	color: #575757;
+    font-size: 15px;
+    font-weight: bold;
+    width: 30%;
+}
+
+table.reg-table td:last-child:hover {
+	background: #fff;
+	color: #1a1a1a;
+}
+
 
 .featured-column {}
 
