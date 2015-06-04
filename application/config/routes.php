@@ -5,6 +5,7 @@ $route['default_controller'] = "top";
 $route['about_philippines'] = "top/about_philippines";
 $route['contact'] = "top/contact";
 $route['registration'] = "top/registration";
+$route['proceed_page'] = "top/proceed_page";
 $route['registration_form'] = "top/registration_form";
 $route['congress'] = "top/congress";
 

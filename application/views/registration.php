@@ -156,8 +156,36 @@
 <script type="text/javascript">
   function func_submit(val){
     document.registration.pay.value = val;
-    //document.registration.submit();
+    var groupA = [1,4,7,10,13,16,19,22,25];
+    var groupB = [2,5,8,11,14,17,20,23,26];
+    var group = "A";
+    var dateAvailable = '11/31/2015';
+    if(groupA.contains(parseInt(val))) {
+      group = "A";
+    } else if(groupB.contains(parseInt(val))) {
+      group = "B";
+      dateAvailable = '02/28/2016';
+    } else {
+       group = "C";
+    }
+
+    var dateNow = "<?php echo date('m/d/Y'); ?>";
+
+    if(new Date(dateNow) <= new Date(dateAvailable) || group === 'C') {
+      document.registration.submit();
+    } else {
+      alert('This is no longer available!');
+    }
     return;
+}
+
+Array.prototype.contains = function(k) {
+  for(var i=0; i < this.length; i++){
+    if(this[i] === k){
+      return true;
+    }
+  }
+  return false;
 }
 </script>
 

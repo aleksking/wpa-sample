@@ -154,13 +154,68 @@ class Top extends CI_Controller {
 		    'rates' => $rates,
 		    'active_menu' => 'registration',
 		);
-		
+
+
+		$layout = 'registration';
+
 		if($this->input->post('pay') && isset($rates[$this->input->post('pay')])){
-			$this->template->load('default', 'registration_confirm', array('rates' => $rates,'pay' => $this->input->post('pay')));
+			$layout = 'customer_form';
 		}else{
-			$this->template->load('default', 'registration', $data);
+			$layout = 'registration';
 		}
 		
+		if($this->input->post('first_name')) {
+			$this->load->helper(array('form'));
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('salutation', 'Salutation', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('first_name', 'First Name', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('contact_no', 'Contact', 'trim|required|xss_clean|callback__check_phone');
+			$this->form_validation->set_rules('food_diet', 'Food Diet', 'trim|required|xss_clean');
+
+			$values = array('salutation' => $this->input->post('salutation'),
+						  'first_name' => $this->input->post('first_name'),
+						  'last_name' => $this->input->post('last_name'),
+						  'email' => $this->input->post('email'),
+						  'birthdate' => $this->input->post('birthdate'),
+						  'contact' => $this->input->post('contact_no'),
+						  'food_diet' => $this->input->post('food_diet'),
+						  'pay_no' => $this->input->post('pay_no'),
+						  'payment_desc' => $rates[$this->input->post('pay_no')]
+						);
+			$this->load->database();
+			$this->load->model('customers','',true);
+			if($this->form_validation->run()) {
+				$saved = $this->customers->register($values);
+				if($saved) {
+					$this->session->set_userdata('registration_id',$saved);
+					 redirect($this->config->config['base_url'].'index.php/proceed_page','refresh');
+				}
+			} else {
+				$layout = 'customer_form';
+			}
+		}
+
+		$this->template->load('default', $layout, $data);
+		
+	}
+
+	public function _check_phone($phone)
+    {
+	   if(preg_match('/[0-9]{7,14}/',$phone))
+	    {
+	        return true;
+	    } else {
+            $this->form_validation->set_message('_check_phone', '%s '.$phone.' is invalid format');
+            return false;
+	    }
+    }
+
+	public function proceed_page() {
+		$data['title'] = 'Proceed Page';
+		$this->template->load('plain', 'proceed_page',$data);
 	}
 
 	public function registration_form() {

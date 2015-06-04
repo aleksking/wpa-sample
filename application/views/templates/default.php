@@ -17,6 +17,9 @@
 
 <!-- CSS Files -->
 
+<link href='<?php echo base_url(); ?>css/bootstrap.css' rel='stylesheet' type='text/css'>
+<link href='<?php echo base_url(); ?>css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='<?php echo base_url(); ?>css/bootstrap-datetimepicker.min.css' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/wpa/style.css">
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>css/wpa/simple_menu.css">
 
@@ -27,6 +30,9 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>js/wpa/jquery.min.js"></script>
 
 <script src="<?php echo base_url(); ?>js/wpa/jquery.tools.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap-datetimepicker.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url(); ?>js/wpa/custom.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>js/wpa/slides/slides.min.jquery.js"></script>
