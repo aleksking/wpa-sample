@@ -33,17 +33,22 @@
 
 		<tr>
 			<td>Email</td>
-			<td><input type="text" name="email" class="form-control" value="<?php echo $this->input->post('email'); ?>" placeholder="Enter Email" required></td>
+			<td><input type="email" name="email" class="form-control" value="<?php echo $this->input->post('email'); ?>" placeholder="Enter Email" required></td>
 		</tr>
 
 		<tr>
 			<td>Birth Date</td>
-			<td><input type="date" name="birthdate" id="birthdate" value="<?php echo $this->input->post('birthdate') ?>" class="form-control" required></td>
+			<td><input type="date" name="birthdate" id="birthdate" value="<?php echo $this->input->post('birthdate') ?>" class="form-control" placeholder="mm/dd/yyyy" required></td>
 		</tr>
 
 		<tr>
 			<td>Contact No.</td>
-			<td><input type="text" name="contact_no" class="form-control" value="<?php echo $this->input->post('contact_no') ?>" placeholder="Enter Contact No."></td>
+			<td><input type="tel" name="contact_no" class="form-control" value="<?php echo $this->input->post('contact_no') ?>" placeholder="Enter Contact No." required></td>
+		</tr>
+
+		<tr>
+			<td>Address</td>
+			<td><input type="text" name="address" class="form-control" value="<?php echo $this->input->post('address') ?>" placeholder="Enter Address" required></td>
 		</tr>
 
 		<tr>

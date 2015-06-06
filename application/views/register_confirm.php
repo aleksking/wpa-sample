@@ -9,10 +9,6 @@
 			<td><?php echo ($this->input->post('pay')) ? $rates[$this->input->post('pay')] : $rates[$this->input->post('pay_no')] ; ?></td>
 		</tr>
 		<tr>
-			<td>Rate</td>
-			<td><?php echo $rates[$values['pay_no']] ?></td>
-		</tr>
-		<tr>
 			<td>Name</td>
 			<td><?php echo $salutation[$values['salutation']]." ".$values['first_name']." ".$values['last_name'] ?> </td>
 		</tr>
@@ -27,6 +23,10 @@
 		<tr>
 			<td>Contact No.</td>
 			<td><?php echo $values['contact'] ?></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><?php echo $values['address'] ?></td>
 		</tr>
 		<tr>
 			<td>Food Diet</td>
@@ -47,5 +47,6 @@
 	<input type="hidden" name="birthdate" value="<?php echo $values['birthdate'] ?>">
 	<input type="hidden" name="contact_no" value="<?php echo $values['contact'] ?>">
 	<input type="hidden" name="food_diet" value="<?php echo $values['food_diet'] ?>">
+	<input type="hidden" name="address" value="<?php echo $values['address'] ?>">
 
 </form>

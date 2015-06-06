@@ -189,8 +189,9 @@ class Top extends CI_Controller {
 		);
 
 		$salutation = array(
-			1 => "Mr",		
-			2 => "Ms",
+			1 => "Dr",		
+			2 => "Mr",
+			3 => "Ms",
 		);
 		
 
@@ -223,7 +224,10 @@ class Top extends CI_Controller {
 						  'contact' => $this->input->post('contact_no'),
 						  'food_diet' => $this->input->post('food_diet'),
 						  'pay_no' => $this->input->post('pay_no'),
-						  'payment_desc' => $rates[$this->input->post('pay_no')]
+						  'payment_desc' => $rates[$this->input->post('pay_no')],
+						  'amount' => $rates_php[$this->input->post('pay_no')],
+						  'address' => $this->input->post('address'),
+						  'reg_no' => $this->randcode(),
 						);
 			$this->load->database();
 			$this->load->model('customers','',true);
@@ -413,6 +417,16 @@ class Top extends CI_Controller {
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
 		redirect('/login', 'refresh');
+	}
+
+	private function randcode(){
+		$seed = str_split('abcdefghijklmnopqrstuvwxyz'
+                 .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+                 .'0123456789');
+		$rand = '';
+		foreach (array_rand($seed, 12) as $k) $rand .= $seed[$k];
+
+		return $rand;
 	}
 
 }
