@@ -30,6 +30,137 @@ class Top extends CI_Controller {
 		$this->template->load('default', 'index', $data);
 	}
 
+	public function user_add() {
+		if(isset($this->session->userdata['logged_in'])) {
+			$data = array(
+			    'title' => 'Admin Lists',
+			    'active_menu' => 'home',
+			);
+			$this->load->helper(array('form'));
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('name', 'Username', 'trim|required|xss_clean|min_length[6]|max_length[50]');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[8]|max_length[50]');
+			$this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required|xss_clean|min_length[8]|max_length[50]');
+
+			if($_POST) {
+				$data['name'] = $this->input->post('name');
+				$data['password'] = $this->input->post('password');
+				$data['cpassword'] = $this->input->post('cpassword');
+				if($this->form_validation->run()) 
+				{
+					if($this->input->post('password') === $this->input->post('cpassword'))
+					{
+						$this->load->model('users');
+						$exists = $this->users->usernameExists($this->input->post('name'));
+						if(!$exists)
+						{
+							$data = array(
+								'name' => $this->input->post('name'),
+								'password' => $this->input->post('password'),
+								'status' => 1,
+								'created_at' => date('Y-m-d h:i:s')
+							);
+							$this->users->save($data);
+							redirect('/users/lists');
+						}
+						else
+						{
+							$data['error'] = 'Username is already exists';
+						}
+					} 
+					else 
+					{
+						$data['error'] = "Both password must matched";
+					}
+				}
+			}
+			$this->template->load('default', 'users_add', $data);
+		}
+	}
+
+	public function user_edit($id) {
+		if(isset($this->session->userdata['logged_in'])) {
+			$data = array(
+			    'title' => 'Admin Lists',
+			    'active_menu' => 'home',
+			);
+			$this->load->helper(array('form'));
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[8]|max_length[50]');
+			
+			$this->load->model('users');
+
+			$row = $this->users->getUser($id,'edit');
+			if(!$row) {
+				redirect('/');
+			}
+			$data['name'] = $row->name;
+			$data['password'] = $row->password;
+
+			if($_POST) {
+				if($this->form_validation->run()) 
+				{
+					$exists = $this->users->usernameExists($this->input->post('name'),'edit',$id);
+					if(!$exists)
+					{
+						$data = array(
+							'name' => $this->input->post('name'),
+							'password' => $this->input->post('password'),
+							'status' => 1,
+							'created_at' => date('Y-m-d h:i:s')
+						);
+						$this->users->update($id,$data);
+						redirect('/users/lists');
+					}
+					else
+					{
+						$data['error'] = $this->input->post('name').' is already exists';
+					} 
+				}
+			}
+			$this->template->load('default', 'user_edit', $data);
+		}
+	}
+
+	public function user_delete($id) {
+		if(isset($this->session->userdata['logged_in'])) {
+			$this->load->model('users');
+			$this->users->deleteUser($id);
+			redirect('/users/lists');
+		}
+	}
+
+	public function admin_lists($offset = 0) {
+		if(isset($this->session->userdata['logged_in'])) {
+			$data = array(
+			    'title' => 'Admin Lists',
+			    'active_menu' => 'home',
+			);
+
+			$this->load->library('table');
+			$this->load->library('pagination');
+
+			$this->load->model('codegen_model');
+			$this->load->model('users');
+
+			$count = $this->users->countUsers();
+
+			$config['base_url'] = base_url().'users/lists';
+			$config['total_rows'] = $count;
+			$config['per_page'] = 5;
+
+			$data['results'] = $this->codegen_model->get('user','*','status = 1',$config['per_page'],$offset);
+
+			$this->pagination->initialize($config);
+
+			$this->template->load('default', 'admin_lists', $data);
+		} else {
+			redirect('/');
+		}
+	}
+
 	public function fees($offset = 0) 
 	{
 		if(isset($this->session->userdata['logged_in'])) {
@@ -48,8 +179,6 @@ class Top extends CI_Controller {
 			$config['per_page'] = 5;
 
 			$data['results'] = $this->codegen_model->get('registered_fees','*','',$config['per_page'],$offset);
-
-			//$this->load->model("codegen_helper");
 
 			$this->pagination->initialize($config);
 

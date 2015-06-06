@@ -17,7 +17,6 @@ class Admin extends CI_Controller {
 		$this->load->library('template');
 	}
 
-
 	public function register()
 	{
 		$this->load->library('form_validation');

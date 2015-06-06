@@ -20,12 +20,13 @@ Class Users extends CI_Model
 		}
 	}
 
-	function usernameExists($username)
+	function usernameExists($username,$action = '',$id)
 	{
 		$this->db->select('name');
 		$this->db->from('user');
 		$this->db->where('name', $username);
-		$this->db->where('status', 1);
+		if($action === 'edit')
+			$this->db->where('id <>', $id);
 		$this->db->limit(1);
 
 		$query = $this->db->get();
@@ -56,6 +57,14 @@ Class Users extends CI_Model
 		}
 	}
 
+	public function countUsers() 
+	{
+		$this->db->where('status',1);
+		$query = $this->db->get('user');
+		$count = count($query->result_array());
+		return $count;
+	}
+
 	function getCoordinatorIds($id)
 	{
 		$this->db->select('id');
@@ -77,6 +86,13 @@ Class Users extends CI_Model
 		$this->db->insert('user', $data);
 	}
 
+
+	function update($id,$data){
+		$this->db->where('id',$id);
+		$this->db->update('user',$data);
+	}
+	
+
 	function get_all_by_role($role)
 	{
 		$user = array();
@@ -93,6 +109,11 @@ Class Users extends CI_Model
 		else {
 			return false;
 		}
+	}
+
+	function deleteUser($id) {
+		$this->db->where('id',$id);
+		$this->db->update('user',array('status' => 0));
 	}
 
 	function delete($data){
