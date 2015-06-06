@@ -19,5 +19,5 @@ $route['programme'] = "top/programme";
 $route['sponsorship'] = "top/sponsorship";
 
 $route['refund_policy'] = "top/refund_policy";
-
+$route['logout'] = "top/logout";
 $route['404_override'] = 'top/index';
