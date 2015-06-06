@@ -33,7 +33,7 @@ class Top extends CI_Controller {
 	public function user_add() {
 		if(isset($this->session->userdata['logged_in'])) {
 			$data = array(
-			    'title' => 'Admin Lists',
+			    'title' => 'Add User',
 			    'active_menu' => 'home',
 			);
 			$this->load->helper(array('form'));
@@ -82,7 +82,7 @@ class Top extends CI_Controller {
 	public function user_edit($id) {
 		if(isset($this->session->userdata['logged_in'])) {
 			$data = array(
-			    'title' => 'Admin Lists',
+			    'title' => 'Edit User',
 			    'active_menu' => 'home',
 			);
 			$this->load->helper(array('form'));
@@ -165,7 +165,7 @@ class Top extends CI_Controller {
 	{
 		if(isset($this->session->userdata['logged_in'])) {
 			$data = array(
-			    'title' => 'Admin Registered Customers',
+			    'title' => 'Registered Customers',
 			    'active_menu' => 'home',
 			);
 
