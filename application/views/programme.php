@@ -7,7 +7,7 @@
     <td colspan="3"><h2>Day 1</h2></td>
   </tr>
   <tr>
-    <td width="13%"></td>
+    <td width="14%"></td>
     <td colspan="2" width="43%">AM Session</td>
   </tr>
   <tr>
@@ -16,7 +16,7 @@
   </tr>
   <tr>
     <td>8:45 - 9:00</td>
-    <td colspan="2">Introduction of Keynote Speaker - Dr. Lourdes Ignacio</td>
+    <td colspan="2">Introduction of Keynote Speaker <br><span>- Dr. Lourdes Ignacio</span></td>
   </tr>
   <tr>
     <td>9:00 - 9:50</td>
@@ -37,7 +37,7 @@
   </tr>
   <tr>
     <td>12:00 - 1:00</td>
-    <td colspan="2">LUNCH</td>
+    <td colspan="2">LUNDBECK SPONSORED LUNCH SYMPOSIUM<br><span>- SPEAKER : ROGER MCINTYRE</span></td>
   </tr>
   <tr>
     <td></td>
@@ -61,8 +61,8 @@
   <tr>
     <td>2:00 - 2:30
 </td>
-    <td>Internet-Based CBT<br><span>- Dr. Rene Samaniego</span></td>
-    <td>Eating Disorders<br><span>- Dr. Evelyn Gapuz</span></td>
+    <td>E Therapy<br><span>- Professor Simon Hatche</span></td>
+    <td>Eating Disorders<br><span>- Dr. Cynthia Leynes</span></td>
   </tr>
   <tr>
     <td>2:30 - 3:00 </td>
@@ -81,11 +81,11 @@
   <tr>
     <td>3:30 - 4:00</td>
     <td>Neurobehavioral Study of Behavioral and Psychological Symptoms of Dementia<br><span>- Dr. Dasig</span></td>
-    <td>Treating Behavioral Addictions <br><span>- Dr. Marian Hembra</span></td>
+    <td>Mood and Addictions<br><span>- Dr. Mark A Frye</span></td>
   </tr>
   <tr>
     <td>4:00 - 4:30</td>
-    <td>Successful Aging / Positive Psychiatry <br><span>- Dr. Joel Eleazar</span></td>
+    <td>Hospice and Pallative Care<br><span>- Dr. Maria Lapid</span></td>
     <td>Mindfulness-Based Relapse Prevention Among Substance Users<br><span>- Dr. Benet Ponio</span></td>
   </tr>
 </table>
@@ -96,7 +96,7 @@
     <td colspan="3"><h2>Day 2</h2></td>
   </tr>
   <tr>
-    <td width="13%"></td>
+    <td width="14%"></td>
     <td colspan="2">AM Session</td>
   </tr>
   <tr>
@@ -105,7 +105,7 @@
   </tr>
   <tr>
     <td>9:50 - 10:20 </td>
-    <td colspan="2">Plenary Lecture 3<br>Continuing Struggle Against Stigma and Prejudices Against Mental Illnesses <br><span>- Dr. Norman Sartorias</span></td>
+    <td colspan="2">Plenary Lecture 3<br>Public Mental Health System Rebuilding and Strengthening<br><span>- Dr. Dina Nadera</span></td>
   </tr>
   <tr>
     <td>10:20 - 11:10</td>
@@ -113,7 +113,7 @@
   </tr>
   <tr>
     <td>11:10 - 12:00</td>
-    <td colspan="2">Public Mental Health System Rebuilding and Strengthening<br><span>- Dr. Dina Nadera</span></td>
+    <td colspan="2">Plenary Lecture 4<br>Positive Psychiatry<br><span>- Dr Dillip Jeste</span></td>
   </tr>
   <tr>
     <td>12:00 - 1:00</td>
@@ -130,18 +130,18 @@
   </tr>
   <tr>
     <td>1:00 - 1:30</td>
-    <td>Psychooncology<span>- Dr. Michelle Riba</span></td>
-    <td>Pharmacological Treatment of Early Psychosis and Prodromal Schizophrenia<br><span>- Dr. Gerard Salazar</span></td>
+    <td>Psychooncology<span><br>- Dr. Michelle Riba</span></td>
+    <td>Updates on Suicide<br><span>- Associate Professor Jane Burns</span></td>
   </tr>
   <tr>
     <td>1:30 - 2:00</td>
     <td>Updates on HIV Psychiatry<br><span>- Dr. Dr. Della</span></td>
-    <td>Glutametergic Treatments for Schizophrenia<br><span>- Dr. Baroque</span></td>
+    <td>Pharmacological Treatment of Early Psychosis and Prodromal Schizophrenia<br><span>- Dr. Gerard Salazar</span></td>
   </tr>
   <tr>
     <td>2:00 - 2:30</td>
-    <td>Dimensional Models of Personality Disorders</td>
-    <td>Care for the chronically mentally ill in the community<br><span>- Dr. Afzal Javed / Dr. Armen Soghoyan</span></td>
+    <td>Fibromyalgia Treatment Program<br><span>- Dr Terese A Rumans</span></td>
+    <td>Glutametergic Treatments for Schizophrenia<br><span>- Dr. Baroque</span></td>
   </tr>
   <tr>
     <td>2:30 - 3:00 </td>
@@ -154,18 +154,18 @@
   </tr>
   <tr>
     <td>3:00 - 3:30</td>
-    <td>Dr. Antonio Sison</td>
-    <td>Stimulation Methods in Psychiatry<span>- Dr. Allan Tasman</span></td>
+    <td>Psychodermatology for Dermatologist<br><span>- Dr Vermen Verallo-Rowell</span></td>
+    <td>Stimulation Methods in Psychiatry<span>- Dr. Simon Kung</span></td>
   </tr>
   <tr>
     <td>3:30 - 4:00</td>
-    <td></td>
-    <td>Role of Lipid Rafts as Targets for Antidepressants <br><span>- Dr. Bernardo Conde</span></td>
+    <td>Psychodermatology for Psychiatrist<br><span>- Dr Lou Querubin</span></td>
+    <td>Role of Lipid Rafts as Targets for Antidepressants<br><span>- Dr. Bernardo Conde</span></td>
   </tr>
   <tr>
     <td>4:00 - 4:30</td>
-    <td width="43%"></td>
-    <td width="43%">Effects of Psychotropics on the Microglia<br><span>- Dr. Raymond Rosales</span></td>
+    <td>Evolving Concepts of Psychodermatology from Molecular to Environmental<br><span> - Dr Antonio Sison</span></td>
+    <td>Effects of Psychotropics on the Microglia<br><span>- Dr. Raymond Rosales</span></td>
   </tr>
 </table>
 
@@ -175,7 +175,7 @@
     <td colspan="3"><h2>Day 3</h2></td>
   </tr>
   <tr>
-    <td width="13%"></td>
+    <td width="14%"></td>
     <td colspan="2">AM Session</td>
   </tr>
   <tr>
@@ -220,7 +220,7 @@
   <tr>
     <td>2:00 - 2:30</td>
     <td>Psychaitric Co-morbidities in Chronic Pain Syndromes <br><span>- Dr. Vicente Rosales</span></td>
-    <td>Psychological Impact of Social Media <br><span>- Dr. Lou Querubin</span></td>
+    <td>Psychological Impact of Social Media <br><span>- Dr. Edgardo Tolentino</span></td>
   </tr>
   <tr>
     <td>2:30 - 3:00 </td>
