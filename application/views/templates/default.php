@@ -126,7 +126,7 @@
 
   <div id="footer">
 
-    <div class="one-half">
+    <div class="one-half" style="width:445px;">
         <h3><a href="<?php echo base_url(); ?>">HOME</a></h3>
         <ul class="footer_links">
             <li><a href="<?php echo base_url(); ?>congress">CONGRESS INFORMATION</a></li>
@@ -138,7 +138,7 @@
         </ul>
     </div>
 
-    <div class="one-half last">
+    <div class="one-half last"  style="width:445px;">
         <h3>Contact Us</h3>
         <p>
           www. philpsych.ph<br>

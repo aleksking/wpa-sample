@@ -33,6 +33,13 @@ class Top extends CI_Controller {
 	public function registration()
 	{
 
+	$curdate = strtotime(date("Y-m"));
+	$activedate = array(
+		'early' => ($curdate < strtotime(date("2015-11")))? 'active':'',
+		'advance' => ($curdate > strtotime(date("2015-11")) && $curdate < strtotime(date("2016-02")))? 'active':'',
+		'onsite' => ($curdate > strtotime(date("2016-02")))? 'active':''
+	);
+
 	$rates = array(
 		1 => 'P26,100.00 / USD 580',
 		2 => 'P29,250.00 / USD 650',
@@ -61,6 +68,36 @@ class Top extends CI_Controller {
 		25 => 'P2,250.00 / USD 50',
 		26 => 'P2,250.00 / USD 50',
 		27 => 'P2,250.00 / USD 50'
+	);
+
+	$rates_php = array(
+		1 => '26100.00',
+		2 => '29250.00',
+		3 => '32400.00',
+		4 => '20250',
+		5 => '23400.00',
+		6 => '26100.00',
+		7 => '18000.00',
+		8 => '20250.00',
+		9 => '23400.00',
+		10 => '15750.00',
+		11 => '18000.00',
+		12 => '20250.00',
+		13 => '10000.00',
+		14 => '12000.00',
+		15 => '14000.00',
+		16 => '9000.00',
+		17 => '11250.00',
+		18 => '13500.00',
+		19 => '18000.00',
+		20 => '20250.00',
+		21 => '22500.00',
+		22 => '15750.00',
+		23 => '20250.00',
+		24 => '23400.00',
+		25 => '2250.00',
+		26 => '2250.00',
+		27 => '2250.00'
 	);
 
 	$group_a = array(
@@ -145,16 +182,20 @@ class Top extends CI_Controller {
 			"Ethiopia",	"Mauritania",	"Zimbabwe",
 		);
 
-		$data = array(
-		    'title' => "Registration",
-		    'group_a' => $group_a,
-		    'group_b' => $group_b,
-		    'group_c' => $group_c,
-		    'group_d' => $group_d,
-		    'rates' => $rates,
-		    'active_menu' => 'registration',
+		$food_diet = array( 
+			1 => "Regular",		
+			2 => "Muslim",
+			3 => "Vegetarian",
 		);
 
+		$salutation = array(
+			1 => "Dr",		
+			2 => "Mr",
+			3 => "Ms",
+		);
+		
+
+		$values = array();
 
 		$layout = 'registration';
 
@@ -164,7 +205,7 @@ class Top extends CI_Controller {
 			$layout = 'registration';
 		}
 		
-		if($this->input->post('first_name')) {
+		if($this->input->post('pay_no')) {
 			$this->load->helper(array('form'));
 			$this->load->library('form_validation');
 
@@ -183,23 +224,60 @@ class Top extends CI_Controller {
 						  'contact' => $this->input->post('contact_no'),
 						  'food_diet' => $this->input->post('food_diet'),
 						  'pay_no' => $this->input->post('pay_no'),
-						  'payment_desc' => $rates[$this->input->post('pay_no')]
+						  'payment_desc' => $rates[$this->input->post('pay_no')],
+						  'amount' => $rates_php[$this->input->post('pay_no')],
+						  'address' => $this->input->post('address'),
+						  'reg_no' => $this->randcode(),
 						);
 			$this->load->database();
 			$this->load->model('customers','',true);
 			if($this->form_validation->run()) {
-				$saved = $this->customers->register($values);
-				if($saved) {
-					$this->session->set_userdata('registration_id',$saved);
-					 redirect($this->config->config['base_url'].'index.php/proceed_page','refresh');
+
+				if($this->input->post('register_confirm')){
+					$saved = $this->customers->register($values);
+					if($saved) {
+						$this->session->set_userdata('registration_id',$saved);
+					}
+
+					$layout = 'to_paypal';
 				}
+
+				if($this->input->post('user-data')) 
+					$layout = 'register_confirm';
+				else if($this->input->post('back')) 
+					$layout = 'customer_form';
+				
 			} else {
 				$layout = 'customer_form';
 			}
 		}
 
+		$data = array(
+		    'title' => "Registration",
+		    'group_a' => $group_a,
+		    'group_b' => $group_b,
+		    'group_c' => $group_c,
+		    'group_d' => $group_d,
+		    'rates' => $rates,
+		    'active_menu' => 'registration',
+		    'values' => $values,
+		    'food_diet' => $food_diet,
+		    'salutation' => $salutation,
+		    'rates_php' => $rates_php,
+		    'activedate' => $activedate
+		);
+
 		$this->template->load('default', $layout, $data);
 		
+	}
+
+	public function register_complete()
+	{
+		$data = array(
+		    'title' => "Registration Complete",
+		    'active_menu' => 'registration',
+		);
+		$this->template->load('default', 'register_complete', $data);
 	}
 
 	public function _check_phone($phone)
@@ -339,6 +417,16 @@ class Top extends CI_Controller {
 		$this->session->unset_userdata('logged_in');
 		session_destroy();
 		redirect('/login', 'refresh');
+	}
+
+	private function randcode(){
+		$seed = str_split('abcdefghijklmnopqrstuvwxyz'
+                 .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+                 .'0123456789');
+		$rand = '';
+		foreach (array_rand($seed, 12) as $k) $rand .= $seed[$k];
+
+		return $rand;
 	}
 
 }
