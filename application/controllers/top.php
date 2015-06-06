@@ -30,6 +30,36 @@ class Top extends CI_Controller {
 		$this->template->load('default', 'index', $data);
 	}
 
+	public function fees($offset = 0) 
+	{
+		if(isset($this->session->userdata['logged_in'])) {
+			$data = array(
+			    'title' => 'Admin Registered Customers',
+			    'active_menu' => 'home',
+			);
+
+			$this->load->library('table');
+			$this->load->library('pagination');
+
+			$this->load->model('codegen_model');
+
+			$config['base_url'] = base_url().'admin/fees';
+			$config['total_rows'] = $this->codegen_model->count('registered_fees');
+			$config['per_page'] = 5;
+
+			$data['results'] = $this->codegen_model->get('registered_fees','*','',$config['per_page'],$offset);
+
+			//$this->load->model("codegen_helper");
+
+			$this->pagination->initialize($config);
+
+			$this->template->load('default', 'fees', $data);
+		} else {
+			redirect('/');
+		}
+	}
+
+
 	public function registration()
 	{
 
