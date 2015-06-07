@@ -1,4 +1,5 @@
 
+<h1>Registered Members</h1>
 <?php
 
 if($results){
@@ -18,6 +19,7 @@ if($results){
     $tbl_array[$i]['Food Diet'] = '<center>'.$food_diet.'</center>';
     $tbl_array[$i]['Amount'] = 'PHP '.number_format($results[$i]['amount']);
     $tbl_array[$i]['Invoice'] = $results[$i]['reg_no'];
+    $tbl_array[$i]['Reg. Date'] = date("m/d/Y", strtotime($results[$i]['created_at']));
   }
 
 
@@ -43,7 +45,7 @@ if($results){
   );
 
   $this->table->set_template($tmpl);
-  $this->table->set_heading('Name','Email','Birth Date','Phone','Address','Food Diet','Amount','Invoice');
+  $this->table->set_heading('Name','Email','Birth Date','Phone','Address','Food Diet','Amount','Invoice','Reg. Date');
 
   echo $this->table->generate($tbl_array);
   echo $this->pagination->create_links();

@@ -388,6 +388,7 @@ class Top extends CI_Controller {
 						  'amount' => $rates_php[$this->input->post('pay_no')],
 						  'address' => $this->input->post('address'),
 						  'reg_no' => $this->randcode(),
+						  'created_at' => date('Y-m-d H:i:s'),
 						);
 			$this->load->database();
 			$this->load->model('customers','',true);
