@@ -56,7 +56,7 @@
   <tr>
     <td>1:30 - 2:00</td>
     <td>Mentalization-Based Therapy<br><span>- Dr. Nader Perroud</span></td>
-    <td>"Updates on Bipolar for Children<br><span>- Dr. Cornelio Banaag</span></td>
+    <td>Updates on Bipolar for Children<br><span>- Dr. Cornelio Banaag</span></td>
   </tr>
   <tr>
     <td>2:00 - 2:30
@@ -155,7 +155,7 @@
   <tr>
     <td>3:00 - 3:30</td>
     <td>Psychodermatology for Dermatologist<br><span>- Dr Vermen Verallo-Rowell</span></td>
-    <td>Stimulation Methods in Psychiatry<span>- Dr. Simon Kung</span></td>
+    <td>Stimulation Methods in Psychiatry<br><span>- Dr. Simon Kung</span></td>
   </tr>
   <tr>
     <td>3:30 - 4:00</td>
@@ -215,7 +215,7 @@
   <tr>
     <td>1:30 - 2:00</td>
     <td>Anti-NMDA Receptor Encephalities<br><span>- Dr. Lilia Lee</span></td>
-    <td>Psychology of Religious Extremism<br><span>- Dr. Roy Abraham Kallivayalil *</span></td>
+    <td>Psychology of Religious Extremism<br><span>- Dr. Roy Abraham Kallivayalil </span></td>
   </tr>
   <tr>
     <td>2:00 - 2:30</td>

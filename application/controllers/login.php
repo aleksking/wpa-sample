@@ -31,7 +31,7 @@ class Login extends CI_Controller {
 			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
 
 			if($this->form_validation->run() == true) {
-				redirect('/', 'refresh');
+				redirect('/admin', 'refresh');
 			}
 		}		 
 		

@@ -163,29 +163,30 @@ class Top extends CI_Controller {
 
 	public function fees($offset = 0) 
 	{
-		if(isset($this->session->userdata['logged_in'])) {
-			$data = array(
-			    'title' => 'Registered Customers',
-			    'active_menu' => 'home',
-			);
-
-			$this->load->library('table');
-			$this->load->library('pagination');
-
-			$this->load->model('codegen_model');
-
-			$config['base_url'] = base_url().'admin/fees';
-			$config['total_rows'] = $this->codegen_model->count('registered_fees');
-			$config['per_page'] = 5;
-
-			$data['results'] = $this->codegen_model->get('registered_fees','*','',$config['per_page'],$offset);
-
-			$this->pagination->initialize($config);
-
-			$this->template->load('default', 'fees', $data);
-		} else {
-			redirect('/');
+		$login_sess = $this->session->userdata('logged_in');
+		if(empty($login_sess)){
+			redirect('/login', 'refresh');
 		}
+
+		$data = array(
+		    'title' => 'Registered Customers',
+		    'active_menu' => 'home',
+		);
+
+		$this->load->library('table');
+		$this->load->library('pagination');
+
+		$this->load->model('codegen_model');
+
+		$config['base_url'] = base_url().'admin';
+		$config['total_rows'] = $this->codegen_model->count('registered_fees');
+		$config['per_page'] = 100;
+
+		$data['results'] = $this->codegen_model->get('registered_fees','*','',$config['per_page'],$offset);
+
+		$this->pagination->initialize($config);
+
+		$this->template->load('default2', 'fees', $data);
 	}
 
 
