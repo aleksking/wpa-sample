@@ -15,9 +15,9 @@ if($results){
     $tbl_array[$i]['Email'] = $results[$i]['email'];
     $tbl_array[$i]['Birth Date'] = $results[$i]['birthdate'];
     $tbl_array[$i]['Phone'] = $results[$i]['contact'];
-    $tbl_array[$i]['Address'] = $results[$i]['contact'];
+    $tbl_array[$i]['Address'] = $results[$i]['address'];
     $tbl_array[$i]['Food Diet'] = '<center>'.$food_diet.'</center>';
-    $tbl_array[$i]['Amount'] = 'PHP '.number_format($results[$i]['amount']);
+    $tbl_array[$i]['Amount'] = number_format($results[$i]['amount']).' PHP';
     $tbl_array[$i]['Invoice'] = $results[$i]['reg_no'];
     $tbl_array[$i]['Reg. Date'] = date("m/d/Y", strtotime($results[$i]['created_at']));
   }

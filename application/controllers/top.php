@@ -234,7 +234,7 @@ class Top extends CI_Controller {
 		1 => '26100.00',
 		2 => '29250.00',
 		3 => '32400.00',
-		4 => '20250',
+		4 => '20250.00',
 		5 => '23400.00',
 		6 => '26100.00',
 		7 => '18000.00',
@@ -388,6 +388,7 @@ class Top extends CI_Controller {
 						  'amount' => $rates_php[$this->input->post('pay_no')],
 						  'address' => $this->input->post('address'),
 						  'reg_no' => $this->randcode(),
+						  'reg_ip' => $_SERVER['REMOTE_ADDR'],
 						  'created_at' => date('Y-m-d H:i:s'),
 						);
 			$this->load->database();
@@ -398,6 +399,7 @@ class Top extends CI_Controller {
 					$saved = $this->customers->register($values);
 					if($saved) {
 						$this->session->set_userdata('registration_id',$saved);
+						$this->mailNotifyAdmins($values);
 					}
 
 					$layout = 'to_paypal';
@@ -430,6 +432,34 @@ class Top extends CI_Controller {
 
 		$this->template->load('default', $layout, $data);
 		
+	}
+
+	private function mailNotifyAdmins($values){
+
+			$to = 'philpsych_org@yahoo.com';
+			$headers = 'From: WPA Manila 2016<info@wpamanila2016.com>' . "\r\n";
+		    $headers .= "Content-type: text/html; charset=\"UTF-8\"; format=flowed \r\n";
+		    $headers .= "Mime-Version: 1.0 \r\n"; 
+		    $headers .= "Content-Transfer-Encoding: quoted-printable \r\n";
+			$subject = 'WPA Online Registration (New)';
+
+			$salutation = array('','Dr. ','Mr. ','Ms. ');
+		    $food_diet = array('','Regular','Muslim','Vegetarian');
+		    $salutation = $salutation[$values['salutation']];
+		    $food_diet = $food_diet[$values['food_diet']];
+
+			$message =	'<br>New Registration from http://wpamanila2016.local/registration <br>'.
+						'Name: '.$salutation.$values['first_name'].' '.$values['last_name'].'<br>'.
+    					'Email: '.$values['email'].'<br>'.
+    					'Birth Date: '.$values['birthdate'].'<br>'.
+    					'Phone: '.$values['contact'].'<br>'.
+    					'Address: '.$values['address'].'<br>'.
+    					'Food Diet: '.$food_diet.'<br>'.
+    					'Amount: '.number_format($values['amount']).' PHP'.'<br>'.
+    					'Invoice: '.$values['reg_no'].'<br>'.
+    					'Reg. Date: '.date("m/d/Y", strtotime($values['created_at']));
+
+			mail($to, $subject, $message,$headers);
 	}
 
 	public function register_complete()
